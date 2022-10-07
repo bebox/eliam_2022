@@ -28,8 +28,8 @@ note = \relative c' {
   e8 cis4 e h r8 |
   cis8 d e fis4 d e8 ~ |
   e8 a4 gis r8 r4 |
-  cis,8 d e fis4 d4 e8 ~ |
-  e8 cis4 e h r8 |
+  cis,8 d e fis4 d8\( d\) e8 ~ |
+  e8 cis8\( cis\) e4 h r8 |
   cis8 d e fis4 d e8 ~ |
   e8 e4 a, r8 r e'8 |
   
@@ -38,30 +38,43 @@ note = \relative c' {
   a8 e4 gis e r8 |
   e8 fis a h4 fis a8 ~ |
   a8 cis4 h r8 r8 e,8 |
-  e8 fis a h4 fis4 a8 ~ |
-  a8 e4 gis e e8 |
+  e8 fis a h4 fis8\( fis8\) a8 ~ |
+  a8 e8\( e8\) gis4 e e8 |
   e8 fis a h4 fis a8 ~ |
   a8 gis4 a r8 r4 |
   
   \markMoj
   a,8 h cis d4 h cis8 ~ |
-  cis8 a\( a\) h4 e r8 |
+  cis8 \phrasingSlurDashed a\( a\) h4 e r8 |
   a,8 h cis d4 h cis8 ~ |
   cis8 a4 e' r8 r4 |
-  a,8 h cis d4 h cis8 ~ |
+  a,8 h cis d4 \phrasingSlurSolid h8\( h8\) cis8 ~ |
   cis8 a a h4 e r8 |
   a,8 h cis d4 h cis8 ~ |
   cis8 e4 a, r8 r4 |
   
-  \markMoj
-  cis'4 cis cis h8 cis ~ |
-  cis8 cis4 cis8 cis4 h |
-  cis4 cis cis h8 cis ~ |
-  cis8 d4 h8 r2 |
-  cis4 cis cis h8 cis ~ |
-  cis8 cis4 cis8 cis4 h |
-  cis4 cis cis h8 cis ~ |
-  cis8 d4 h8 r4 e,8 e |
+  \pageBreak
+  
+  \once \override Score.RehearsalMark.self-alignment-X = #CENTER
+  \once \override Staff.BarLine.extra-spacing-width = #'(0 . 1.2)
+  \bar ".|:-||"
+  \mark \default
+  \repeat volta 2 {
+    cis'4 cis cis h8 cis ~ |
+    cis8 cis4 cis8 cis4 h |
+    cis4 cis cis h8 cis ~ |
+    \alternative {
+    \volta 1 {
+      cis8 d4 h8 r2 |
+    }
+    \volta 2 {
+      \repeatTie cis8 d4 h8 r4 e,8 e |
+    }
+    }
+%      cis4 cis cis h8 cis ~ |
+%    cis8 cis4 cis8 cis4 h |
+%    cis4 cis cis h8 cis ~ |
+  }
   
   f8 f f g ~ g4 g |
   a8 a a h ~ h4 r4 |
@@ -75,53 +88,60 @@ note = \relative c' {
 
 tekst = \lyricmode {
   \set stanza = "1."
-  Pje -- vaj -- te Ja -- hvi pje -- smu no -- vu
-  Pje -- vaj -- te sad svi Na -- ro di!
-  Pje -- vaj -- te Ja -- hvi pje -- smu no -- vu
-  Hva -- li -- te i -- me Nje -- go -- vo!
+  Pje -- vaj -- te Ja -- hvi pje -- smu no -- vu!
+  Pje -- vaj -- te sad svi na -- ro di!
+  Pje -- vaj -- te Ja -- hvi _ pje -- smu _ no -- vu,
+  hva -- li -- te i -- me nje -- go -- vo!
   
-  Na -- vješ -- ćuj -- te Nje -- go -- vo spa -- se -- nje.
+  \set stanza = "2."
+  Na -- vješ -- ćuj -- te nje -- go -- vo __ spa -- se -- nje,
   ka -- zuj -- te sla -- vu Ja -- hvi -- nu!
-  Na -- vješ -- ćuj -- te Nje -- go -- vo spa -- se -- nje.
+  Na -- vješ -- ćuj -- te nje -- go _ -- vo __ spa _ -- se -- nje,
   svim po -- ga -- ni -- ma ču -- de -- sa ta!
   
-  Ve -- lik je Ja -- hve, do -- sto -- jan hva -- le
+  \set stanza = "3."
+  Ve -- lik je Ja -- hve, do -- sto -- jan hva -- le,
   stra -- šni -- ji od svih bo -- go -- va!
-  Ve -- lik je Ja -- hve, do -- sto -- jan hva -- le
-  On je ne -- be -- sa stvo -- ri -- o!
+  Ve -- lik je Ja -- hve, _ do -- sto -- jan hva -- le,
+  on je ne -- be -- sa stvo -- ri -- o!
   
-  Daj -- te Ja -- hvi sla -- vu i si -- lu
+  Daj -- te Ja -- hvi sla -- vu i si -- lu,
   daj -- te Ja -- hvi sla -- vu svu!
-  Daj -- te Ja -- hvi sla -- vu i si -- lu
-  daj -- te Ja -- hvi sla -- vu svu!
+  sla -- vu svu!
   
-  Nek se go -- vo -- ri me -- đu po -- ga -- ni -- ma
-  Ja -- hve kra -- lju -- je!
-  On u -- čvr -- sti svijet da ne po -- ma -- kne se
-  Ja -- hve kra -- lju -- je!
+  \set stanza = "1."
+  Nek se go -- vo -- ri me -- đu po -- ga -- ni -- ma:
+  Ja -- hve kra -- lju -- je! __
+  On u -- čvr -- sti svijet da ne po -- ma -- kne se, __
+  Ja -- hve kra -- lju -- je! __
 }
 
 tekstB = \lyricmode {
-  \set stanza = "2."
-  Ra -- duj se ne -- bo, kli -- či zem -- ljo
-  po -- lja i šu -- me pje -- vaj -- te!
-  Mo -- re nek hu -- či,i što "je u" nje -- mu
+  \set stanza = "4."
+  Ra -- duj se, ne -- bo, kli -- či zem -- ljo!
+  Po -- lja i šu -- me pje -- vaj -- te!
+  Mo -- re nek hu -- či, i što __ je u nje -- mu!
   Hva -- li -- te i -- me Ja -- hvi -- no!
   
-  _ Ra -- duj se ne -- bo, kli -- či zem -- ljo
-  po -- lja i šu -- me pje -- vaj -- te!
-  _ Mo -- re nek hu -- či,i što "je u" nje -- mu
+  _ \set stanza = "4."
+  Ra -- duj se, ne -- bo, kli -- či zem -- ljo!
+  Po -- lja i šu -- me pje -- vaj -- te!
+  _ Mo -- re nek hu -- či, i što __ je u nje -- mu!
   _ Hva -- li -- te i -- me Ja -- hvi -- no!
   
-  Ra -- duj se ne -- bo, kli -- či __ _ zem -- ljo
-  po -- lja i šu -- me pje -- vaj -- te!
-  Mo -- re nek hu -- či,i što je u nje -- mu
+  \set stanza = "4."
+  Ra -- duj se, ne -- bo, kli -- či __ _ zem -- ljo!
+  Po -- lja i šu -- me pje -- vaj -- te!
+  Mo -- re nek hu -- či, i što __ je u nje -- mu!
   Hva -- li -- te i -- me Ja -- hvi -- no!
   
-  \repeat unfold 33 {_}
-  U i -- sti -- ni pra -- vdi do -- la -- zi On
-  Svije -- tu su -- di -- ti!
-  _ kle -- kni -- te pred njim i daj -- te mu čast
+  \repeat unfold 19 {_}
+  \set stanza = "2."
+  _
+  U i -- sti -- ni, pra -- vdi, do -- la -- zi on
+  svije -- tu su -- di -- ti! __
+  "" Kle -- kni -- te pred njim i daj -- te mu čast,
+  Ja -- hve kra -- lju -- je! __
 }
 
 ref = \lyricmode {
@@ -148,11 +168,12 @@ akordi = \chordmode {
   \smaller \italic Leadsheet: \hspace #1
   \huge {
     \rounded-box {
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { intro } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus } } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus } } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 1. } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 2. } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) C \italic \teeny { verse 3. } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { D \teeny \italic { chorus 1. } } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A+B+C \italic \teeny { verse 4. x3 } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { D \teeny \italic { chorus 2. } } }
     }
   }
 }
