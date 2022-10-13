@@ -70,8 +70,11 @@ kiticaB = \lyricmode {
 akordi = \chordmode {
   \set chordChanges = ##t
   a2:m d:m | a:m e:7 | a:m g | c  e:7 |
-  a2:m d:m | a:m e:7 | a:m e:7 | a1:m |
-  a1:m | g | e:7 | a:m |
+  a2:m d:m | a:m e:7 | a:m e:7 |a1:m |
+  \set chordChanges = ##f
+  \parenthesize a1:m |
+  \set chordChanges = ##t
+  g1 | e:7 | a:m |
   f1 | g | c | e:7 |
   \set chordChanges = ##f
   c |

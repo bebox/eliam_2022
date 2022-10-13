@@ -6,12 +6,12 @@
   titlex = "Eliam 2022"
   composer = "Frank Bosch"
   style = ""
-  broj = "1"
+  broj = "4"
   %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Name, Album } }
 }
 
 \paper {
-  \aFourR
+  \aFourL
   %min-systems-per-page = #7
   %annotate-spacing = ##t
   %system-system-spacing.padding = #3.2
@@ -67,7 +67,20 @@ ref = \lyricmode {
 
 akordi = \chordmode {
   \set chordChanges = ##t
+  d2 g4 a |
+  d2 g4 a |
+  d2 g4 a |
+  d2 g4 a |
+  d2. a4
   
+  d2 g2 |
+  d2. a4 |
+  d2 g4 a4 |
+  h1:m |
+  g1 |
+  a2 h2:m |
+  g1 |
+  a2 d2 |
 }
 
 \score {

@@ -6,7 +6,7 @@
   titlex = "Psalam 139"
   composer = "Ljubica Zemunović"
   style = "Emil Moguš"
-  broj = "5"
+  broj = "3"
   %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Name, Album } }
 }
 

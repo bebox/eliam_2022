@@ -6,7 +6,7 @@
   titlex = "Eliam 2022"
   composer = "Maasej Kovačević"
   style = "Filip Horvat"
-  broj = "10"
+  broj = "9"
   %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Name, Album } }
 }
 

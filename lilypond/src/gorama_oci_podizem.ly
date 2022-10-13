@@ -6,24 +6,41 @@
   titlex = "Eliam 2022"
   composer = "Petra Horvat"
   style = ""
-  broj = "1"
+  broj = "2"
   %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Name, Album } }
 }
 
 \paper {
-  \aFourR
+  \aFourL
   %min-systems-per-page = #7
   %annotate-spacing = ##t
   %system-system-spacing.padding = #3.2
-  %page-breaking = #ly:one-page-breaking
-  %last-bottom-spacing.minimum-distance = #8
+  page-breaking = #ly:one-page-breaking
+  last-bottom-spacing.minimum-distance = #11.3
 }
 
 note = \relative c' {
   \key c \major
   \time 4/4
   
-  \markMojPoc
+    %\override Score.RehearsalMark.extra-spacing-width = #'(0 . 0)
+  %\override Score.RehearsalMark.extra-spacing-height = #'(-inf.0 . +inf.0) 
+  %\once \override Score.RehearsalMark.outside-staff-priority = #1
+  \once \override Score.RehearsalMark.X-offset = #5
+  %\once \override Score.RehearsalMark.self-alignment-X = #-0.8
+  %\once \override Score.RehearsalMark.extra-spacing-height = #0
+  %\override Score.RehearsalMark.break-align-symbols = #'(breathing-sign)
+  %\override Score.RehearsalMark.break-align-symbols = #'(breathing-sign)
+  %\mark \default
+  %\breathe
+  %\noBreak
+  \once \override Score.RehearsalMark.Y-offset = #3.5
+  %\once \override Staff.BarLine #'extra-spacing-width = #'(-5 . 3)
+  %\once \override Staff.BarLine.extra-spacing-width = #'(0 . 2)
+  %\once \override Staff.BarLine #'color = #red
+  %\once \override Staff.BarLine.bar-extent = #'(1.5 . 2.5)
+  %\bar "||"
+  \mark \default
   r8 e8 e e e d d c |
   d8 e e2. |
   r8 e8 e e e d d c |
@@ -44,7 +61,12 @@ note = \relative c' {
   a'4( g) f a8. g16 ~ |
   g2. r4 |
 
-  \markMojCenter
+  \once \override Score.RehearsalMark.self-alignment-X = #CENTER
+  \once \override Score.RehearsalMark.Y-offset = #0.4
+  %\once \override Staff.BarLine #'extra-spacing-width = #'(-5 . 3)
+  \once \override Staff.BarLine.extra-spacing-width = #'(0 . 1.2)
+  \bar "||"
+  \mark \default
   c4 a g r8. c16 ~ |
   c8 c a a g4 e8. a16 |
   r1 |
@@ -98,7 +120,16 @@ ref = \lyricmode {
 
 akordi = \chordmode {
   \set chordChanges = ##t
+  c1 | c | f | f |
+  c1 | c | f | f |
   
+  d1:m | d:m | a:m | a:m |
+  f1 | f | d:m | g |
+  
+  c1 | c | f | f |
+  a1:m | g | f | f | c | c |
+  f1 | f | a:m |
+  g1 | f | g | c |
 }
 
 \score {

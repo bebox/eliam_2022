@@ -6,7 +6,7 @@
   titlex = "Eliam 2022"
   composer = "Filip Horvat"
   style = ""
-  broj = "8"
+  broj = "7"
   tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Zbor Eliam, Čakovec 
   } }
 }

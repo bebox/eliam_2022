@@ -6,7 +6,7 @@
   titlex = "Eliam 2022"
   composer = "Petra Horvat"
   style = ""
-  broj = "9"
+  broj = "8"
   tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Zbor Eliam, Čakovec }} 
 }
 
@@ -16,9 +16,8 @@
   %annotate-spacing = ##t
   %system-system-spacing.padding = #3.2
   page-breaking = #ly:one-page-breaking
-  %last-bottom-spacing.minimum-distance = #12
-  paper-height = 297\mm
-
+  last-bottom-spacing.minimum-distance = #13.7
+  %paper-height = 11.69\in
 }
 
 note = \relative c' {

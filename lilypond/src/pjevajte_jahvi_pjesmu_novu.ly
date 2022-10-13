@@ -6,12 +6,12 @@
   titlex = "Psalam 96"
   composer = "Petra Horvat"
   style = ""
-  broj = "1"
+  broj = "6"
   %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Name, Album } }
 }
 
 \paper {
-  \aFourR
+  \aFourL
   %min-systems-per-page = #7
   %annotate-spacing = ##t
   %system-system-spacing.padding = #3.2
@@ -150,7 +150,27 @@ ref = \lyricmode {
 
 akordi = \chordmode {
   \set chordChanges = ##t
-  c1 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | e2 a2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | e2 a2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | a2/cis e2 |
+  a2 d2 | e2 a2 |
+  
+  a2. d4:6/a |
+  a2. d4:6/a |
+  a2. d4:6/a |
+  a2 e2 |
+  a2 e2 |
+  
+  d2:m c2 | f2 g2 | a2. d4:6/a | a1 |
+  d2:m c2 | f2 g2 | a2. d4:6/a | a1 |
 }
 
 \score {
@@ -172,7 +192,7 @@ akordi = \chordmode {
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 2. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) C \italic \teeny { verse 3. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { D \teeny \italic { chorus 1. } } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A+B+C \italic \teeny { verse 4. x3 } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A, A+B, A+B+C \italic \teeny { verse 4. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { D \teeny \italic { chorus 2. } } }
     }
   }
