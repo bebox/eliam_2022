@@ -23,11 +23,9 @@ note = \relative c' {
   \key g \major
   \time 4/4
   
-  \markMoj
-  r1 |
-  r1 |
+
   
-  \markMojPonRight \break
+  \markMojPoc
   g'8. h16 ~ h8 a8 ~ a8 \phrasingSlurDashed g8\( g8\) g8 |
   a8 g16 a16 ~ a16 g8 a16 ~ a16 h8 h16 ~ h4 |
   g8. h16 ~ h8 a8 ~ a8 g4 g8 |
@@ -35,17 +33,25 @@ note = \relative c' {
   g8. h16 ~ h8 a8 ~ a8 g8\( g8\) g8 |
   a8 g16 a16 ~ a16 g8 a16 ~ a16 h8 h16 ~ h4 |
   g8. h16 ~ h8 a8 ~ a8 g8\( g8\) g8 |
-  a8 g16 fis16 ~ fis16 g8 g16 ~ g4 \bar "" \break \markMojPraz d8 d8 |
+  a8 g16 fis16 ~ fis16 g8 g16 ~ g4 \bar "" \break \markMojPoc d8 d8 |
 
+  \repeat volta 2 {
 
-  d'4. h8 ~ h4 r8 h8 |
-  a8 g16 d16 ~ d8 a'8 ~ a8 g8 d8 d8 |
-  d'4. h8 ~ h4 r8 h8 |
-  a8 g16 d16 ~ d8 a'8 ~ a8 g8 r4 |
-  g16 g8 g16 ~ g16 g8 a16 ~ a16 h16 a8 r4 |
- 
-  g16 g8 g16 ~ g16 g8 a16 ~ a16 g8 fis16 ~ fis16 g8 g16 ~ |
-  g1 
+      d'4. h8 ~ h4 r8 h8 |
+      a8 g16 d16 ~ d8 a'8 ~ a8 g8 d8 d8 |
+      d'4. h8 ~ h4 r8 h8 |
+      a8 g16 d16 ~ d8 a'8 ~ a8 g8 r4 |
+      g16 g8 g16 ~ g16 g8 a16 ~ a16 h16 a8 r4 |
+      g16 g8 g16 ~ g16 g8 a16 ~ a16 g8 fis16 ~ fis16 g8 g16 ~ |
+         \alternative {
+     \volta 1 {
+        g2. d8 d |
+      }
+      \volta 2 {
+        \repeatTie g1  |
+      }
+    }
+  }
   \bar "|."
 }
 
@@ -56,7 +62,8 @@ tekst = \lyricmode {
   Ka -- o sta -- blo kraj vo -- de što te -- če ni -- kad ne -- ma u ve -- nu -- lo li -- šće, 
   u svoj čas plod do -- no -- si, 
   sve što ra -- di do -- brim u -- ro -- di. __ 
-
+  Ka -- o
+  (di.) __
 }
 
 tekstB = \lyricmode {
@@ -74,10 +81,11 @@ akordi = \chordmode {
   e2:m c | d2 g |
   e2:m c | d2 g |
   e2:m c | d2 g |
-  e2:m c | d2 g |
 
-c1 | g/h | c | e:m | c |
-a2:m d | g1 |
+  c1 | g/h | c | e:m | c |
+  a2:m d | g1 |
+  \set chordChanges = ##f
+  g1 |
  }
 
 \score {
@@ -96,11 +104,11 @@ a2:m d | g1 |
   \huge {
     \rounded-box {
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { intro } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 1. } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus 2x } } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 1. } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { B \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { intro } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 2. } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus 2x } } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 2. } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { B \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { outro } }
     }
   }

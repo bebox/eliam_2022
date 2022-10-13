@@ -101,6 +101,11 @@ myStaffSize = #23
 %% USER DEF. FUNCTIONS %%------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
+%eliam zuta
+crvena = 1.000 zelena = 0.804 plava = 0.173
+%eliam narancasta
+%crvena = 0.992 zelena = 0.369 plava = 0.051
+
 %BREATHEMOJ
 \layout {
   \context {
@@ -110,9 +115,9 @@ myStaffSize = #23
     \override BreathingSign.text = \markup { \raise #0.2 "," }	%stavi zarez
     %\override BreathingSign.color = #blue				%boja zareza
     %narančasta eliam boja
-    \override BreathingSign.color = #(rgb-color 0.992 0.369 0.051)
+    \override BreathingSign.color = #(rgb-color crvena zelena plava)
     %crvena eliam boja
-    %\override BreathingSign.color = #(rgb-color 0.929 0.141 0.282)
+    %\override BreathingSign.color = #(rgb-color crvena zelena plava)
   }
 
   \context {
@@ -120,7 +125,7 @@ myStaffSize = #23
     %\Score markFormatter = #format-mark-circle-numbers			%krug oko broja
     \override RehearsalMark.self-alignment-X = #CENTER		%pozicija broja na zarez
     %\override RehearsalMark.color = #blue				%boja rehearsal marka
-    \override RehearsalMark.color = #(rgb-color 0.992 0.369 0.051)
+    \override RehearsalMark.color = #(rgb-color crvena zelena plava)
   }
 }
 
@@ -138,7 +143,7 @@ breathemoj = {
   \once \override Score.RehearsalMark.Y-offset = #0.1
   %\once \override Staff.BarLine #'extra-spacing-width = #'(-5 . 3)
   \once \override Staff.BarLine.extra-spacing-width = #'(0 . 0)
-  \once \override Staff.BarLine.color = #(rgb-color 0.992 0.369 0.051)
+  \once \override Staff.BarLine.color = #(rgb-color crvena zelena plava)
   \once \override Staff.BarLine.bar-extent = #'(1.5 . 2.5)
   \bar "|"
   %\mark \default
@@ -301,7 +306,7 @@ left = { \once \override LyricText.X-offset = #-2.8 }                 % \left "S
     %\Score markFormatter = #format-mark-circle-numbers
     \override RehearsalMark.self-alignment-X = #CENTER
     %\override RehearsalMark.color = #blue
-    \override RehearsalMark.color = #(rgb-color 0.992 0.369 0.051)
+    \override RehearsalMark.color = #(rgb-color crvena zelena plava)
     %\override StaffSymbol.thickness = #0.5
     %\override Stem.thickness = #2.5
     %\override Stem.thickness = #10
@@ -331,7 +336,7 @@ aFourL = \paper {
       \line { %stvori lijevu grupu stupaca
         \column %prvi lijevi stupac
         { \vspace #1.5 %pomiče znak prema dole
-          { \override #'(font-name . "JohnSans Medium Pro") \override #'(font-size . 13) \with-color #(rgb-color 0.992 0.369 0.051) \fromproperty #'header:broj } }
+          { \override #'(font-name . "JohnSans Medium Pro") \override #'(font-size . 13) \with-color #(rgb-color crvena zelena plava) \fromproperty #'header:broj } }
         \hspace #2 %pomiče slova u desno od znaka
         \left-column %drugi lijevi stupac s lijevim poravnavanjem
         { \when-property #'header:title {
@@ -406,7 +411,7 @@ aFourR = \paper {
         \column %prvi lijevi stupac
         
         { \vspace #1.5 %pomiče znak prema dole
-          { \override #'(font-name . "JohnSans Medium Pro") \override #'(font-size . 13) \with-color #(rgb-color 0.992 0.369 0.051) \fromproperty #'header:broj } }
+          { \override #'(font-name . "JohnSans Medium Pro") \override #'(font-size . 13) \with-color #(rgb-color crvena zelena plava) \fromproperty #'header:broj } }
 
       }
 

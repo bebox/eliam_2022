@@ -1,4 +1,4 @@
-\version "2.23.9"
+\version "2.23.12"
 \include "../config/include.ily"
 
 \header {
@@ -16,7 +16,7 @@
   %annotate-spacing = ##t
   %system-system-spacing.padding = #3.2
   page-breaking = #ly:one-page-breaking
-  last-bottom-spacing.minimum-distance = #11.3
+  last-bottom-spacing.minimum-distance = #11.2
 }
 
 note = \relative c' {
@@ -152,7 +152,7 @@ akordi = \chordmode {
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 2. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { bridge } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus } } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C \teeny \italic { chorus x2 } } }
     }
   }
 }

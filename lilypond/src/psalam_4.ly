@@ -97,7 +97,7 @@ Smi -- re -- na sr -- ca pro -- mi -- sli -- te sa -- da i ne grije -- ši -- te
 Dr -- šći -- te na tren na svo -- me le -- ža -- ju i za -- nije -- mi -- te. __
 Jer mno -- gi ka -- žu: 
   Tko će po -- ka -- za -- ti nam sre -- ću? 
-  _ O -- staj -- te pra -- ve -- dni i u Ja -- hvu se u -- zdaj -- te. 
+  Vi o -- staj -- te pra -- ve -- dni i u Ja -- hvu se u -- zdaj -- te. 
 }
 
 akordi = \chordmode {
@@ -134,11 +134,12 @@ akordi = \chordmode {
   \huge {
     \rounded-box {
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { intro } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { A \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 1. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { A \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) B \italic \teeny { verse 2. } }
-       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \italic \teeny { modulation to G over D } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { A \teeny \italic { chorus x2 } } }
+       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \italic \teeny { modulation -> G } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { A \teeny \italic { chorus } } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \italic \teeny { ending Eb-F-G } }
     }  
   }

@@ -12,9 +12,13 @@
 
 \paper {
   \aFourL
-  %min-systems-per-page = #7
+  %min-systems-per-page = #8
   %annotate-spacing = ##t
-  %system-system-spacing.padding = #3.2
+  system-system-spacing.padding = #2
+  %page-breaking = #ly:one-page-breaking
+  %last-bottom-spacing.minimum-distance = #0
+  system-system-spacing.basic-distance = #13.8
+
 }
 
 note = \relative c'' {
@@ -54,8 +58,11 @@ note = \relative c'' {
   r2 g8 g g g |
   g4 r8 g8 g g g g |
   h4 h8 a ~ a8 g4. |
-  \bar "||"
-  \markMojPonn
+  
+  \once \override Score.RehearsalMark.self-alignment-X = #CENTER
+  \once \override Staff.BarLine.extra-spacing-width = #'(0 . 1.2)
+  \bar ".|:-||"
+  \mark \default
   %\bar ".|:"
   r2 d8 e g4 |
   r2 d8 e g4 |

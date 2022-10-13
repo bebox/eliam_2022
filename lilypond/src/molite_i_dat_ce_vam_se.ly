@@ -1,4 +1,4 @@
-\version "2.23.9"
+\version "2.23.12"
 \include "../config/include.ily"
 
 \header {
@@ -14,7 +14,7 @@
   \aFourL
   %min-systems-per-page = #7
   %annotate-spacing = ##t
-  %system-system-spacing.padding = #3.2
+  system-system-spacing.basic-distance = #15
   %page-breaking = #ly:one-page-breaking
   %last-bottom-spacing.minimum-distance = #8
 }
@@ -33,16 +33,16 @@ note = \relative c' {
         d2. r4 
       }
       \volta 2 {
-        d2. r8 a'8
+        d2. r8 a'8 
       }
     }
   }
   
   \markMojCenter
   d8 d cis a h4 a |
-  fis8( g16) a ~ a2 r4 |
+  fis8( g16) a ~ a2 r4 | 
   d8 d cis a h4 a8. fis16 ~ |
-  fis2 r8 fis4 e8 |
+  fis2 r8 fis4 e8 | 
   e8 d r4 r4 r8 d8 |
   e8 fis e d r8 fis4 e8 |
   e8 d r4 r4 r8 d8 |

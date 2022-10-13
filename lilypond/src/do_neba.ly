@@ -1,4 +1,4 @@
-\version "2.23.9"
+\version "2.23.12"
 \include "../config/include.ily"
 
 \header {
@@ -27,12 +27,16 @@ note = \relative c' {
   r8 e8 e c d4 f8 e ~ |
   e2 r2 |
   r8 e4 f8 g4\( f8\) f\( ~ |
-  f8 e ~ e4\) r2 |
+  f8 e ~ e4\) r2 | \break
   r8 e8\( e\) c d4\( f8\) e ~ |
   e2 r2 |
   r8 e8 e8 c8 d4\( c8\) a ~ |
   a2 r8 a'4 h8 |
-  \markMojPonn
+  \once \override Score.RehearsalMark.self-alignment-X = #CENTER
+  \once \override Staff.BarLine.extra-spacing-width = #'(0 . 1.2)
+  \once \override Score.RehearsalMark.Y-offset = #4
+  \bar ".|:-||"
+  \mark \default
   \repeat volta 2 {
     c4 e, r4. c'8 |
     c8\( h a\) h ~ h h4 a8 |
@@ -44,7 +48,7 @@ note = \relative c' {
   }
   \alternative {
     {r2 r8 a4 h8}
-    {r1 \bar "|."}
+    {r1 | r1 \bar "|."}
   }
 }
 
@@ -70,14 +74,12 @@ kiticaB = \lyricmode {
 akordi = \chordmode {
   \set chordChanges = ##t
   a2:m d:m | a:m e:7 | a:m g | c  e:7 |
-  a2:m d:m | a:m e:7 | a:m e:7 |a1:m |
-  \set chordChanges = ##f
-  \parenthesize a1:m |
-  \set chordChanges = ##t
-  g1 | e:7 | a:m |
+  a2:m d:m | a:m e:7 | a:m d:m | a2:m e:7 |
+  
+  a1:m | g1 | e:7 | a:m |
   f1 | g | c | e:7 |
   \set chordChanges = ##f
-  c |
+  e1:7 | a:m |
 }
 
 \score {

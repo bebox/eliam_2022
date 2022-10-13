@@ -1,4 +1,4 @@
-\version "2.23.9"
+\version "2.23.12"
 \include "../config/include.ily"
 
 \header {
@@ -58,8 +58,8 @@ note = \relative c' {
   \once \override Staff.BarLine.extra-spacing-width = #'(0 . 1.2)
   \bar ":.|.:"
   \mark \default
-  r2 fis4 fis | fis2. fis4 |
-  r2 fis4 fis | fis2. fis4 |
+  fis2. fis4 | fis2. fis4 |
+  fis2. fis4 | fis2. fis4 |
   h2 a | d, e |
   fis1 ~ | fis1 |
   \bar ":|."
@@ -100,7 +100,7 @@ akordi = \chordmode {
   h1:m | a/cis | e:m | fis | fis |
   
   d1 | d | fis | fis | g | g | d | d |
-  h1:m | h:m | a:6 | a:6 | g | g | h | h |
+  h1:m | h:m | a:6 | a:6 | g | g | h:sus | h |
 }
 
 \score {
@@ -120,10 +120,9 @@ akordi = \chordmode {
     \rounded-box {
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 1. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { B \teeny \italic { chorus 1. } } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) A \italic \teeny { verse 2. } }
       \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { B \teeny \italic { chorus 2. } } }
-      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) \bold { C } }
+      \line { \pad-to-box #'(0 . 0) #'(-0.34 . 1.85) C \italic \teeny { outro } }
     }
   }
 }

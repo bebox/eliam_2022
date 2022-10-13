@@ -82,9 +82,9 @@ tekst = \lyricmode {
   Du -- šu mi __ i __ dje -- la znaš,
   ne -- ma taj -- ne __ za te -- be.
   
-  Spa -- vam li __ i -- li bu -- dan sam,
+  Spa -- vam li __ i -- li bu -- dna sam,
   sve ti vi -- diš, __ sve do -- bro znaš. __
-  Zna -- nju tvom ni -- sam do -- ra -- st'o, __
+  Zna -- nju tvom ni -- sam do -- ra -- sla, __
   ka -- o dije -- te __ pred to -- bom kle -- čim sad. __
   
   Kad ne -- vo -- lje __ ko ta -- ma zgu -- snu se, __
@@ -104,17 +104,17 @@ ref = \lyricmode {
 
 akordi = \chordmode {
   \set chordChanges = ##t
-  d1 | c/d | g/d | d2. cis4:dim7 |
-  h1:m7 | e:m7 | g2:maj7 g:m6 | d1 |
+  d1 | e:m/d | a2:sus4 a2 | d1 |
+  d1 | e:m/d | a2:sus4 a2 | d1 |
   
-  g1 | d/fis | e:7 | e2:m9 a4:7 as:7 |
-  g1 | d/fis | e4:m7 d/fis g2 | a1:sus4 | a |
+  g1:maj7 | d/fis | e2:m7 gis2:dim | a2:sus a2 |
+  g1:maj7 | d/fis | e1:m | a1:sus | a1 |
   
-  d1 | c/d | g/d | d2. cis4:dim7 |
-  h1:m7 | e:m7 | g2:maj7 g:m6 | d1 |
+  d1 | e:m/d | a2:sus4 a2 | d1 |
+  d1 | e:m/d | a2:sus4 a2 | d1 |
   
-  g1 | d/fis | e:7 | e2:m9 a4:7 as:7 |
-  g1 | d/fis | e4:m7 d/fis g2 | a1:sus4 | a |
+  g1:maj7 | d/fis | e2:m7 gis2:dim | a2:sus a2 |
+  g1:maj7 | d/fis | e1:m | a1:sus | a1 |
 }
 
 \score {

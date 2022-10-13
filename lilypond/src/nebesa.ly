@@ -75,7 +75,7 @@ ref = \lyricmode {
 akordi = \chordmode {
   \set chordChanges = ##t
   e1 | e1 | cis:m | cis:m |
-  h1 | h1 | h1 | cis:m | h | a |
+  h1 | h1 | cis:sus | cis:m | h | a |
   a1 | a | a | e | e | gis:m | a | cis:m | a |
 }
 
