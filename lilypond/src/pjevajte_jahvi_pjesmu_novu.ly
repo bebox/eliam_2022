@@ -83,7 +83,7 @@ note = \relative c' {
     cis4 cis cis h8 cis ~ |
     \alternative {
     \volta 1 {
-      cis8 d4 h8 r2 |
+      cis8 d4 h8 ~ h2 |
     }
     \volta 2 {
       \repeatTie cis8 d4 h8 r4 e,8 e |
@@ -97,30 +97,30 @@ note = \relative c' {
   f8 f f g ~ g4 g |
   a8 a a h ~ h4 r4 |
   cis4 cis cis h8 cis ~ |
-  cis2. r8 e,8 f8 f f g ~ g4 g8 g |
+  cis2 r4 r8 e,8 f8 f f g ~ g4 g8 g |
   a8 a a h ~ h4 r4 |
   cis4 cis cis h8 cis ~ |
-  cis2. r4 |
+  cis2 r2 |
   \bar "|."
 }
 
 tekst = \lyricmode {
   \set stanza = "1."
-  Pje -- vaj -- te Ja -- hvi pje -- smu no -- vu! __
+  Pje -- vaj -- te Ja -- hvi pje -- smu no -- vu!
   Pje -- vaj -- te sad svi na -- ro di! __
-  Pje -- vaj -- te Ja -- hvi _ pje -- smu _ no -- vu, __
+  Pje -- vaj -- te Ja -- hvi _ pje -- smu _ no -- vu,
   hva -- li -- te i -- me nje -- go -- vo! __
   
   \set stanza = "2."
-  Na -- vješ -- ćuj -- te nje -- go -- vo __ spa -- se -- nje, __
+  Na -- vješ -- ćuj -- te nje -- go -- vo __ spa -- se -- nje,
   ka -- zuj -- te sla -- vu Ja -- hvi -- nu! __
   Na -- vješ -- ćuj -- te nje -- go _ -- vo __ spa _ -- se -- nje,
   svim po -- ga -- ni -- ma ču -- de -- sa ta! __
   
   \set stanza = "3."
-  Ve -- lik je Ja -- hve, do -- sto -- jan hva -- le, __
+  Ve -- lik je Ja -- hve, do -- sto -- jan hva -- le,
   stra -- šni -- ji od svih bo -- go -- va! __
-  Ve -- lik je Ja -- hve, _ do -- sto -- jan hva -- le, __
+  Ve -- lik je Ja -- hve, _ do -- sto -- jan hva -- le,
   on je ne -- be -- sa stvo -- ri -- o! __
   
   Daj -- te Ja -- hvi sla -- vu i si -- lu,
@@ -136,21 +136,21 @@ tekst = \lyricmode {
 
 tekstB = \lyricmode {
   \set stanza = "4."
-  Ra -- duj se, ne -- bo, kli -- či zem -- ljo! __
+  Ra -- duj se, ne -- bo, kli -- či zem -- ljo!
   Po -- lja i šu -- me pje -- vaj -- te! __
-  Mo -- re nek hu -- či, i što __ je u nje -- mu! __
+  Mo -- re nek hu -- či, i što __ je u nje -- mu!
   Hva -- li -- te i -- me Ja -- hvi -- no! __
   
   \set stanza = "4."
-  "" Ra -- duj se, ne -- bo, kli -- či zem -- ljo! __
+  "" Ra -- duj se, ne -- bo, kli -- či zem -- ljo!
   Po -- lja i šu -- me pje -- vaj -- te! __
   "" Mo -- re nek hu -- či, i što __ je u nje -- mu! __
   "" Hva -- li -- te i -- me Ja -- hvi -- no! __
   
   \set stanza = "4."
-  Ra -- duj se, ne -- bo, kli -- či __ _ zem -- ljo! __
+  Ra -- duj se, ne -- bo, kli -- či __ _ zem -- ljo!
   Po -- lja i šu -- me pje -- vaj -- te! __
-  Mo -- re nek hu -- či, i što __ je u nje -- mu! __
+  Mo -- re nek hu -- či, i što __ je u nje -- mu!
   Hva -- li -- te i -- me Ja -- hvi -- no! __ ""
   
   \repeat unfold 18 {_}
@@ -171,8 +171,8 @@ akordi = \chordmode {
   a2 d2 | a2/cis e2 |
   a2 d2 | a2/cis e2 |
   a2 d2 | a2/cis e2 |
-  a2 d2 | e2 a2 |
-  a2 d2 | a2/cis e2 |
+  a2 d2 | e2 a2 | \set chordChanges = ##f
+  \parenthesize a2 d2 | a2/cis e2 |
   a2 d2 | a2/cis e2 |
   a2 d2 | a2/cis e2 |
   a2 d2 | e2 a2 |
