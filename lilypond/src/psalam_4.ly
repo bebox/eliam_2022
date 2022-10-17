@@ -7,7 +7,7 @@
   composer = "Petra Horvat"
   style = ""
   broj = "8"
-  tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Zbor Eliam, Čakovec }} 
+  %tagline = \markup { \override #'(font-name . "JohnSans White Pro") \override #'(font-size . -3) { Izvorno: Zbor Eliam, Čakovec }} 
 }
 
 \paper {
