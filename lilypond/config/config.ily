@@ -102,9 +102,9 @@ myStaffSize = #23
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %eliam zuta
-crvena = 1.000 zelena = 0.804 plava = 0.173
+%crvena = 1.000 zelena = 0.804 plava = 0.173
 %eliam narancasta
-%crvena = 0.992 zelena = 0.369 plava = 0.051
+crvena = 0.980 zelena = 0.635 plava = 0.122
 
 %BREATHEMOJ
 \layout {
